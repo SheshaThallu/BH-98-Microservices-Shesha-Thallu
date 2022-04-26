@@ -9,7 +9,7 @@ public class TestDay
 		System.out.println("Enter a Number");
 		Scanner sc = new Scanner(System.in);
 		String day = sc.next();
-		LocalDate date = LocalDate.of(Integer.parseInt(day), 1, 1);
+		LocalDate date = LocalDate.of(1, 1, Integer.parseInt(day));
 		System.out.println(date.getDayOfWeek());
 		System.out.println("Enter number of days you want to add ");
 		date = date.plusDays(sc.nextLong());

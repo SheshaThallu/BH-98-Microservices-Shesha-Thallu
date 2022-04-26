@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 class Student3{
 	private int id;
 	private String name;
-	private Department dept;;
+	private Department dept;
 	private int cmarks,pmarks,mmarks,total;
 	
 	public Student3(int id, String name, Department dept, int cmarks, int pmarks, int mmarks) {
