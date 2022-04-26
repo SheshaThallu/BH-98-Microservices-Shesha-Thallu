@@ -129,24 +129,18 @@ public class TestStudentDepartment {
 		Student3 s6 = new Student3(106,"Jay",dpt3,90,95,93);
 		Student3 s7 = new Student3(107,"Sagar",dpt3,83,67,93);
 		
-		
-		
-		
 		List<Student3> students = Arrays.asList(s1,s2,s3,s4,s5,s6,s7);
-		List<Department> departments = Arrays.asList(dpt1,dpt2,dpt3);
 		
 		for(Student3 st:students)
 			st.setTotal(st.getCmarks()+st.getMmarks()+st.getPmarks());
 		
-		
 		Map<Department, List<Student3>> studentDeptWise = students.stream().collect(Collectors.groupingBy(Student3::getDept_id));
 
 		System.out.println(studentDeptWise);
-		for(List<Student3> st:studentDeptWise.values()) {
-			Optional<Student3> studentDeptWise2 = st.stream().collect(Collectors.maxBy(Comparator.comparing(Student3::getTotal)));
-		
-		System.out.println(studentDeptWise2);
+		for(List<Student3> st:studentDeptWise.values()) 
+		{
+			Optional<Student3> topStudent = st.stream().collect(Collectors.maxBy(Comparator.comparing(Student3::getTotal)));
+			System.out.println(topStudent);
 		}
 	}
-
 }
