@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -8,6 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController 
 {
+	@Autowired
+	StudentService studentService;
+	
 	@RequestMapping("/")
 	@ResponseBody
 	String hello()
@@ -25,6 +29,7 @@ public class HelloController
 	String studentInfo(@PathVariable String name,@PathVariable Long marks)
 	{
 		Student student = new Student(marks, name);
-		return student.getGrade();
+		return studentService.getGrade(student);
 	}
+	
 }
