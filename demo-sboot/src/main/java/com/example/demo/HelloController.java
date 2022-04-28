@@ -25,10 +25,10 @@ public class HelloController
 		return "Addition "+(firstNumber+secondNumber)+" Subtraction "+(firstNumber-secondNumber)+" Multiplication "+(firstNumber*secondNumber)+" Division "+(firstNumber/secondNumber);
 	}
 	
-	@RequestMapping("/student/{name}/{marks}")
-	String studentInfo(@PathVariable String name,@PathVariable Long marks)
+	@RequestMapping("/student/{id}/{name}/{marks}")
+	String studentInfo(@PathVariable Long id,@PathVariable String name,@PathVariable Long marks)
 	{
-		Student student = new Student(marks, name);
+		Student student = new Student(101,marks, name);
 		return studentService.getGrade(student);
 	}
 	
