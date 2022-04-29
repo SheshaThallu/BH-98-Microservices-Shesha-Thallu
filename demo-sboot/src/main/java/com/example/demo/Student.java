@@ -13,6 +13,7 @@ public class Student
 	private long id;
 	private long marks;
 	private String name;
+	private String grade;
 	Student() {}
 	public Student(long id, long marks, String name) {
 		super();
@@ -37,6 +38,12 @@ public class Student
 	}
 	public void setId(long id) {
 		this.id = id;
+	}
+	public String getGrade() {
+		return grade;
+	}
+	public void setGrade(String grade) {
+		this.grade = grade;
 	}
 	@Override
 	public String toString() {
