@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -34,9 +35,9 @@ public class StudentController
 	}
 	
 	@GetMapping("/student/{id}")
-	String getOne(@PathVariable Long id)
+	Optional<Student> getOneStudent(@PathVariable Long id)
 	{
-		return studentService.getGrade(studentRepository.getById(id));
+		return studentService.getOneStudent(id);
 	}
 	
 	@DeleteMapping("/student/{id}")
