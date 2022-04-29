@@ -34,4 +34,8 @@ public class StudentService
 			student.setGrade("F");
 		return studentRepository.save(student);
 	}
+	public void deleteStudent(Long id) 
+	{
+		studentRepository.deleteById(id);
+	}
 }
