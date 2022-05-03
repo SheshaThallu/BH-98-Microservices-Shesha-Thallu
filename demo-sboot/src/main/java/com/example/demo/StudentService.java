@@ -14,7 +14,7 @@ public class StudentService
 	public Student saveStudent(Student student)
 	{
 		if(student.getMarks()>100)
-			student.setGrade("I");
+			student.setGrade("Invalid");
 		else if(student.getMarks()>=90)
 			student.setGrade("A");
 		else if(student.getMarks()>=80)
@@ -22,7 +22,7 @@ public class StudentService
 		else if(student.getMarks()>=70)
 			student.setGrade("C");
 		else
-			student.setGrade("F");
+			student.setGrade("Fail");
 		return studentRepository.save(student);
 	}
 	public void deleteStudent(Long id) 
