@@ -15,5 +15,5 @@ export class UserService {
  	}
  	public findAll(): Observable<User[]>{
 		return this.http.get<User[]>(this.usersUrl);
-}
+	}
 }
