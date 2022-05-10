@@ -1,0 +1,79 @@
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<section>
+				<header class="header">
+					<div class="row">
+						<div class="col-md-2">
+							<form name="empForm">
+								<table>
+									<tr>
+										<th colspan="2">Add Employee</th>
+									</tr>
+									<tr>
+										<td>Name:</td>
+										<td><input id="name" name="name"></td>
+									</tr>
+									<tr>
+										<td>Email</td>
+										<td><input id="email" name="email"></td>
+									</tr>
+									<tr>
+										<td>Address</td>
+										<td><input id="address" name="address"></td>
+									</tr><tr>
+										<td>Department</td>
+										<td><input id="department" name="department"></td>
+									</tr>
+									<tr>
+										<td>ContactNo:</td>
+										<td><input id="contactNo" name="contactNo"></td>
+									</tr>
+									<tr>
+										<td>Joining Date:</td>
+										<td><input id="joiningDate" name="joiningDate"></td>
+									</tr>
+									<tr>
+										<td colspan="2"> <button type="button" (click)="createEmployee()"
+												class="blue-button">submit</button></td>
+									</tr>
+								</table>
+							</form>
+						</div>
+					</div>
+				</header>
+			</section>
+			<section class="main">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>Name</th>
+							<th>Email</th>
+							<th>Address</th>
+							<th>Department</th>
+							<th>ContactNo</th>
+							<th>JoiningDate</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr *ngFor="let employee of employees">
+							<th scope="row">{{employee.id}}</th>
+							<td>{{employee.name}}</td>
+							<td>{{employee.email}}</td>
+							<td>{{employee.address}}</td>
+							<td>{{employee.department}}</td>
+							<td>{{employee.contactNo}}</td>
+							<td>{{employee.joiningDate}}</td>
+							<td>
+								<button type="button" class="btn btn-danger"
+									(click)="deleteEmployee(employee)">Delete</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+		</div>
+	</div>
+</div>

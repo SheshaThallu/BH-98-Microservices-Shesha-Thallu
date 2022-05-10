@@ -1,0 +1,40 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="card bg-dark my-5">
+				<div class="card-body">
+					<h2 class="card-title text-center text-white py-3">{{ title }}</h2>
+					<ul class="text-center list-inline py-3">
+						<li class="list-inline-item">
+							<a routerLink="/applicants" class="btn btn-info">List Applicants</a>
+						</li>
+						<li class="list-inline-item">
+							<a routerLink="/addapplicant" class="btn btn-info">Add Applicant</a>
+						</li>
+						<li class="list-inline-item">
+							<a routerLink="/deleteapplicant" class="btn btn-info">Delete Applicant</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<router-outlet></router-outlet>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="card bg-dark my-5">
+				<div class="card-body">
+					<h2 class="card-title text-center text-white py-3">{{ title2 }}</h2>
+					<ul class="text-center list-inline py-3">
+						<li class="list-inline-item">
+							<a routerLink="/employees" class="btn btn-info">List Employees</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<router-outlet></router-outlet>
+		</div>
+	</div>
+</div>
