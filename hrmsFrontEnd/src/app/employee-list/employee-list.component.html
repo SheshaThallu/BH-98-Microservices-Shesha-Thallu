@@ -22,6 +22,7 @@
             <td> {{ employee.contactNo }} </td>
             <td> {{ employee.joiningDate }} </td>
             <td>
+                <button (click) = "employeeDetails(employee.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
             </td>
         </tr>
     </tbody>

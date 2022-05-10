@@ -1,6 +1,6 @@
 <div class="col-md-6 offset-md-3">
-	<h3> Create Employee </h3>
-	<form (ngSubmit)="onSubmit()">
+	<h3> Update Employee </h3>
+	<form (ngSubmit)="OnSubmit()">
 
 		<div class="form-group">
 			<label> Name</label>
@@ -29,7 +29,6 @@
 			<label> JoiningDate</label>
 			<input type="text" class="form-control" id="joiningDate" [(ngModel)]="employee.joiningDate" name="joiningDate">
 		</div>
-
 		<button class="btn btn-success" type="submit">Submit</button>
 
 	</form>
