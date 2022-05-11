@@ -36,6 +36,8 @@ public class EmployeeService {
 					employee.setDepartment(emp.getDepartment());
 					employee.setContactNo(emp.getContactNo());
 					employee.setJoiningDate(emp.getJoiningDate());
+					employee.setSalary(emp.getSalary());
+					employee.setLeaves(emp.getLeaves());
 					return employeeRepository.save(employee);
 				}).orElseGet(() -> {
 					emp.setId(id);

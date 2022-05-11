@@ -21,6 +21,12 @@
     <div>
         <label> <b> JoiningDate: </b></label> {{employee.joiningDate}}
     </div>
+    <div>
+        <label> <b> Salary: </b></label> {{employee.salary}}
+    </div>
+    <div>
+        <label> <b> Leaves: </b></label> {{employee.leaves}}
+    </div>
     <button (click) = "updateEmployee(employee.id)" class = "btn btn-info"> Update</button>
 	<button (click) = "deleteEmployee(employee.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
 

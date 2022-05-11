@@ -15,6 +15,8 @@ public class Employee
 	private String department;
 	private Long contactNo;
 	private String joiningDate;
+	private Long salary;
+	private Long leaves;
 	public Long getId() {
 		return id;
 	}
@@ -57,11 +59,25 @@ public class Employee
 	public void setJoiningDate(String joiningDate) {
 		this.joiningDate = joiningDate;
 	}
+	public Long getSalary() {
+		return salary;
+	}
+	public void setSalary(Long salary) {
+		this.salary = salary;
+	}
+	public Long getLeaves() {
+		return leaves;
+	}
+	public void setLeaves(Long leaves) {
+		this.leaves = leaves;
+	}
 	@Override
 	public String toString() {
 		return "Employee [id=" + id + ", name=" + name + ", email=" + email + ", address=" + address + ", department="
-				+ department + ", contactNo=" + contactNo + ", joiningDate=" + joiningDate + "]";
+				+ department + ", contactNo=" + contactNo + ", joiningDate=" + joiningDate + ", salary=" + salary
+				+ ", leaves=" + leaves + "]";
 	}
+	
 	
 	
 	
