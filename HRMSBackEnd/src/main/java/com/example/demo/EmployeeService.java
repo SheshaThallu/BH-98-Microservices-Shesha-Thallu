@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
 public class EmployeeService {
 	@Autowired
 	private EmployeeRepository employeeRepository;
-
 	public List<Employee> getAll() {
 		return employeeRepository.findAll();
 	}
@@ -37,7 +36,6 @@ public class EmployeeService {
 					employee.setContactNo(emp.getContactNo());
 					employee.setJoiningDate(emp.getJoiningDate());
 					employee.setSalary(emp.getSalary());
-					employee.setLeaves(emp.getLeaves());
 					return employeeRepository.save(employee);
 				}).orElseGet(() -> {
 					emp.setId(id);

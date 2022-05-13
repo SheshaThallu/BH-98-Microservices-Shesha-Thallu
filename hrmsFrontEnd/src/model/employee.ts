@@ -8,5 +8,4 @@ export class Employee
     contactNo!: number;
     joiningDate!: string;
     salary!: number;
-    leaves!: number;
 }
