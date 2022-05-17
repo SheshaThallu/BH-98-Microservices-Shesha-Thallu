@@ -16,8 +16,8 @@ public class LeavesService
 	}
 
 	public Leaves saveLeaves(Leaves leaves) {
-		Leaves leave = leavesRepository.findByEmpIdAndYear(leaves.getEmpId(),leaves.getYear());
-		if(leave!=null && leave.getMonth().equals(leaves.getMonth())) 
+		Leaves leave = leavesRepository.findByEmpIdAndYearAndMonth(leaves.getEmpId(),leaves.getYear(),leaves.getMonth());
+		if(leave!=null) 
 		{
 			leave.setNumberOfDays(leave.getNumberOfDays()+leaves.getNumberOfDays());
 			return leavesRepository.save(leave);

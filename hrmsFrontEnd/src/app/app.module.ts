@@ -11,6 +11,9 @@ import { EmployeeDetailsComponent } from './employee-details/employee-details.co
 import { UpdateEmployeeComponent } from './update-employee/update-employee.component';
 import { LeavesComponent } from './leaves/leaves.component';
 import { CreateLeavesComponent } from './create-leaves/create-leaves.component';
+import { GeneratePayslipComponent } from './generate-payslip/generate-payslip.component';
+import { PayslipListComponent } from './payslip-list/payslip-list.component';
+import { SalaryslipDetailsComponent } from './salaryslip-details/salaryslip-details.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { CreateLeavesComponent } from './create-leaves/create-leaves.component';
     EmployeeDetailsComponent,
     UpdateEmployeeComponent,
     LeavesComponent,
-    CreateLeavesComponent
+    CreateLeavesComponent,
+    GeneratePayslipComponent,
+    PayslipListComponent,
+    SalaryslipDetailsComponent
   ],
   imports: [
     BrowserModule,

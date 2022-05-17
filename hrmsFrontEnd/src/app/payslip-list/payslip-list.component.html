@@ -1,0 +1,23 @@
+<h2> Employee List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> Employee Id</th>
+            <th> Month </th>
+            <th> Year </th>
+            <th> Salary </th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let salaryPay of payslips" >
+            <td> {{ salaryPay.empId }} </td>
+            <td> {{ salaryPay.month }} </td>
+            <td> {{ salaryPay.year }} </td>
+            <td> {{ salaryPay.salary }} </td>
+            <td>
+                <button (click) = "salarySlipDetails(salaryPay.empId)" class = "btn btn-info" style="margin-left: 10px"> View </button>
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,5 +1,7 @@
 package com.example.demo;
 
+import java.time.LocalDate;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -14,7 +16,7 @@ public class Employee
 	private String address;
 	private String department;
 	private Long contactNo;
-	private String joiningDate;
+	private LocalDate joiningDate;
 	private Long salary;
 	public Long getId() {
 		return id;
@@ -52,10 +54,10 @@ public class Employee
 	public void setContactNo(Long contactNo) {
 		this.contactNo = contactNo;
 	}
-	public String getJoiningDate() {
+	public LocalDate getJoiningDate() {
 		return joiningDate;
 	}
-	public void setJoiningDate(String joiningDate) {
+	public void setJoiningDate(LocalDate joiningDate) {
 		this.joiningDate = joiningDate;
 	}
 	public Long getSalary() {

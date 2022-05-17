@@ -21,7 +21,7 @@
             <td> {{ employee.address }} </td>
             <td> {{ employee.department }} </td>
             <td> {{ employee.contactNo }} </td>
-            <td> {{ employee.joiningDate }} </td>
+            <td> {{ employee.joiningDate | date:'longDate' }} </td>
             <td> {{ employee.salary }} </td>
             <td>
                 <button (click) = "employeeDetails(employee.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>

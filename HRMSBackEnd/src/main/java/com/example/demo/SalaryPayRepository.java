@@ -2,9 +2,8 @@ package com.example.demo;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-
 @Repository
-public interface LeavesRepository extends JpaRepository<Leaves, Long>
+public interface SalaryPayRepository extends JpaRepository<SalaryPay, Long>
 {
-	Leaves findByEmpIdAndYearAndMonth(Long empId, int i, int j);
+	
 }

@@ -6,6 +6,6 @@ export class Employee
     address!: string;
     department!: string;
     contactNo!: number;
-    joiningDate!: string;
+    joiningDate!: Date;
     salary!: number;
 }
