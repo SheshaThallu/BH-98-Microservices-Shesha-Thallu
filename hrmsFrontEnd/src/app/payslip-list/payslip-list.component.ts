@@ -23,8 +23,8 @@ export class PayslipListComponent implements OnInit {
 				this.payslips = data;
 		});
 	}
-	salarySlipDetails(id: number)
+	salarySlipDetails(id: number, year: number, month: number)
 	{
-		this.router.navigate(['salaryslip-details', id]);
+		this.router.navigate(['salaryslip-details', id, year, month]);
 	}
 }

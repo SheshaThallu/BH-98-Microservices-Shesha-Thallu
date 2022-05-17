@@ -16,4 +16,7 @@ export class LeavesService {
 	createLeaves(leaves: Leaves): Observable<Object> {
 		return this.httpClient.post(`${this.baseURL}`, leaves);
 	}
+	getLeavesByEmpIdAndYearAndMonth(empId: number, year: number, month: number): Observable<Leaves>{
+		return this.httpClient.get<Leaves>(`${this.baseURL}/${empId}/${year}/${month}`);
+	}
 }

@@ -7,4 +7,5 @@ import org.springframework.stereotype.Repository;
 public interface LeavesRepository extends JpaRepository<Leaves, Long>
 {
 	Leaves findByEmpIdAndYearAndMonth(Long empId, int i, int j);
+
 }

@@ -1,10 +1,12 @@
 package com.example.demo;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,6 +21,11 @@ public class SalaryPayController
 	List<SalaryPay> getAll()
 	{
 		return salaryPayService.getAll();
+	}
+	@GetMapping("/salaries/{empId}/{year}/{month}")
+	Optional<SalaryPay> getSalaryPay(@PathVariable Long empId,@PathVariable int year,@PathVariable int month)
+	{
+		return salaryPayService.getSalaryPay(empId,year,month);
 	}
 	@PostMapping("/salaries")
 	SalaryPay save(@RequestBody SalaryPay salaryPay)

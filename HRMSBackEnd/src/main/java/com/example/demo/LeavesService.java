@@ -25,5 +25,18 @@ public class LeavesService
 		return leavesRepository.save(leaves);
 	}
 
-	
+	public Leaves getLeaves(Long empId,int year,int month) {
+		if(leavesRepository.findByEmpIdAndYearAndMonth(empId, year, month)==null)
+		{
+			Leaves leaves = new Leaves();
+			leaves.setEmpId(empId);
+			leaves.setYear(year);
+			leaves.setMonth(month);
+			leaves.setNumberOfDays((long) 0);
+			leavesRepository.save(leaves);
+			return leaves;
+		}
+		else
+			return leavesRepository.findByEmpIdAndYearAndMonth(empId, year, month);
+	}
 }

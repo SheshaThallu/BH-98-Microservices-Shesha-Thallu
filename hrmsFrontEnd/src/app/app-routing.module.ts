@@ -19,7 +19,8 @@ const routes: Routes = [
 	{ path: 'create-leaves', component: CreateLeavesComponent },
 	{ path: 'salaries', component: PayslipListComponent},
 	{ path: 'generate-payslip', component: GeneratePayslipComponent},
-	{ path: 'payslip-details', component: SalaryslipDetailsComponent}
+	{ path: 'salaryslip-details/:id/:year/:month', component: SalaryslipDetailsComponent},
+	{ path: 'salaryslip-details/:id', component: SalaryslipDetailsComponent}
 ];
 
 @NgModule({

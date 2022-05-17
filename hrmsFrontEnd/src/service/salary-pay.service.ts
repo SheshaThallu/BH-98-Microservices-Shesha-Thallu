@@ -15,4 +15,7 @@ export class SalaryPayService {
 	createSalarySlip(salaryPay: SalaryPay): Observable<Object> {
 		return this.httpClient.post(`${this.baseURL}`, salaryPay);
 	}
+	getSalaryPayByEmpIdAndYearAndMonth(empId: number,year: number,month: number): Observable<SalaryPay>{
+		return this.httpClient.get<SalaryPay>(`${this.baseURL}/${empId}/${year}/${month}`);
+	}
 }
