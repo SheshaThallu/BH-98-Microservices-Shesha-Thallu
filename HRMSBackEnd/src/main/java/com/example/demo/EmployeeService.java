@@ -25,8 +25,8 @@ public class EmployeeService {
 	public Optional<Employee> getEmployee(Long id) {
 		return employeeRepository.findById(id);
 	}
-
-	public Employee updateEmployee(Long id,Employee emp) {
+	public Employee updateEmployee(Long id,Employee emp) 
+	{
 		return employeeRepository.findById(id).map(
 				employee ->{
 					employee.setName(emp.getName());
@@ -42,5 +42,4 @@ public class EmployeeService {
 					return employeeRepository.save(emp);
 				});
 	}
-
 }

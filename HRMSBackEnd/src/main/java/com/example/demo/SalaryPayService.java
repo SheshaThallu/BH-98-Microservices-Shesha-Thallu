@@ -28,7 +28,7 @@ public class SalaryPayService
 		cal1.set(salaryPay.getYear(), salaryPay.getMonth(), cal1.getMaximum(Calendar.DAY_OF_MONTH));
 		int workingDays = 0;
 		/* run the while loop until the months are same */
-		while (cal.get(Calendar.MONTH) != cal1.get(Calendar.MONTH)) {
+		while (!cal.after(cal1)) {
 		      if (cal.get(Calendar.DAY_OF_WEEK) != Calendar.SUNDAY
 		           && cal.get(Calendar.DAY_OF_WEEK) != Calendar.SATURDAY) {
 		                workingDays++;
@@ -39,7 +39,7 @@ public class SalaryPayService
 		Leaves leaves = leavesRepository.findByEmpIdAndYearAndMonth(salaryPay.getEmpId(), salaryPay.getYear(), salaryPay.getMonth());
 		if(leaves!=null)
 		{
-			salaryPay.setSalary( (employee.getSalary() - salaryPay.getDeduction()) - leaves.getNumberOfDays()*employee.getSalary()/workingDays);
+			salaryPay.setSalary( (employee.getSalary() - salaryPay.getDeduction()) - ((leaves.getNumberOfDays()*employee.getSalary())/workingDays));
 		}
 		else
 		{
