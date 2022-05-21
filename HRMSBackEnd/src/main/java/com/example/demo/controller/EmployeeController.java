@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -13,13 +13,16 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.demo.entity.Employee;
+import com.example.demo.service.EmployeeService;
+
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
 public class EmployeeController 
 {
 	@Autowired
-	EmployeeService employeeService;
+	private EmployeeService employeeService;
 	@GetMapping("/employees")
 	List<Employee> getAll()
 	{

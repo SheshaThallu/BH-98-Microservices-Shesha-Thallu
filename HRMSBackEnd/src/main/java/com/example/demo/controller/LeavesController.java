@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.controller;
 
 import java.util.List;
 
@@ -10,12 +10,15 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.demo.entity.Leaves;
+import com.example.demo.service.LeavesService;
+
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
 public class LeavesController 
 {
 	@Autowired
-	LeavesService leavesService;
+	private LeavesService leavesService;
 	@GetMapping("/leaves")
 	List<Leaves> getAll()
 	{

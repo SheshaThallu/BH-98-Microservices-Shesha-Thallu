@@ -14,6 +14,7 @@ import { CreateLeavesComponent } from './create-leaves/create-leaves.component';
 import { GeneratePayslipComponent } from './generate-payslip/generate-payslip.component';
 import { PayslipListComponent } from './payslip-list/payslip-list.component';
 import { SalaryslipDetailsComponent } from './salaryslip-details/salaryslip-details.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { SalaryslipDetailsComponent } from './salaryslip-details/salaryslip-deta
     CreateLeavesComponent,
     GeneratePayslipComponent,
     PayslipListComponent,
-    SalaryslipDetailsComponent
+    SalaryslipDetailsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

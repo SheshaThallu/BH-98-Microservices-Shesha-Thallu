@@ -1,18 +1,18 @@
-package com.example.demo;
+package com.example.demo.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-
 @Entity
-public class Leaves 
+public class SalaryPay 
 {
 	@Id @GeneratedValue
 	private Long id;
 	private Long empId;
 	private int month;
 	private int year;
-	private Long numberOfDays;
+	private Long deduction;
+	private double salary;
 	public Long getId() {
 		return id;
 	}
@@ -37,16 +37,22 @@ public class Leaves
 	public void setYear(int year) {
 		this.year = year;
 	}
-	public Long getNumberOfDays() {
-		return numberOfDays;
+	public Long getDeduction() {
+		return deduction;
 	}
-	public void setNumberOfDays(Long numberOfDays) {
-		this.numberOfDays = numberOfDays;
+	public void setDeduction(Long deduction) {
+		this.deduction = deduction;
+	}
+	public double getSalary() {
+		return salary;
+	}
+	public void setSalary(double salary) {
+		this.salary = salary;
 	}
 	@Override
 	public String toString() {
-		return "Leaves [id=" + id + ", empId=" + empId + ", month=" + month + ", year=" + year + ", numberOfDays="
-				+ numberOfDays + "]";
+		return "SalaryPay [id=" + id + ", empId=" + empId + ", month=" + month + ", year=" + year + ", deduction="
+				+ deduction + ", salary=" + salary + "]";
 	}
 	
 }

@@ -1,18 +1,20 @@
-package com.example.demo;
+package com.example.demo.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+
+import org.springframework.stereotype.Component;
+@Component
 @Entity
-public class SalaryPay 
+public class Leaves 
 {
 	@Id @GeneratedValue
 	private Long id;
 	private Long empId;
 	private int month;
 	private int year;
-	private Long deduction;
-	private double salary;
+	private Long numberOfDays;
 	public Long getId() {
 		return id;
 	}
@@ -37,22 +39,16 @@ public class SalaryPay
 	public void setYear(int year) {
 		this.year = year;
 	}
-	public Long getDeduction() {
-		return deduction;
+	public Long getNumberOfDays() {
+		return numberOfDays;
 	}
-	public void setDeduction(Long deduction) {
-		this.deduction = deduction;
-	}
-	public double getSalary() {
-		return salary;
-	}
-	public void setSalary(double salary) {
-		this.salary = salary;
+	public void setNumberOfDays(Long numberOfDays) {
+		this.numberOfDays = numberOfDays;
 	}
 	@Override
 	public String toString() {
-		return "SalaryPay [id=" + id + ", empId=" + empId + ", month=" + month + ", year=" + year + ", deduction="
-				+ deduction + ", salary=" + salary + "]";
+		return "Leaves [id=" + id + ", empId=" + empId + ", month=" + month + ", year=" + year + ", numberOfDays="
+				+ numberOfDays + "]";
 	}
 	
 }

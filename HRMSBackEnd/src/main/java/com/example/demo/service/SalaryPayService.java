@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.service;
 
 import java.util.Calendar;
 import java.util.List;
@@ -7,15 +7,20 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.demo.entity.Employee;
+import com.example.demo.entity.Leaves;
+import com.example.demo.entity.SalaryPay;
+import com.example.demo.repository.SalaryPayRepository;
+
 @Service
 public class SalaryPayService 
 {
 	@Autowired
-	SalaryPayRepository salaryPayRepository;
+	private SalaryPayRepository salaryPayRepository;
 	@Autowired
-	EmployeeRepository employeeRepository;
+	private EmployeeService employeeService;
 	@Autowired
-	LeavesRepository leavesRepository;
+	private LeavesService leavesService;
 	public List<SalaryPay> getAll() {
 		return salaryPayRepository.findAll();
 	}
@@ -35,8 +40,8 @@ public class SalaryPayService
 		      }
 		      cal.add(Calendar.DAY_OF_MONTH, 1);
 		}
-		Employee employee = employeeRepository.getById(salaryPay.getEmpId());
-		Leaves leaves = leavesRepository.findByEmpIdAndYearAndMonth(salaryPay.getEmpId(), salaryPay.getYear(), salaryPay.getMonth());
+		Employee employee = employeeService.getById(salaryPay.getEmpId());
+		Leaves leaves = leavesService.findByEmpIdAndYearAndMonth(salaryPay.getEmpId(), salaryPay.getYear(), salaryPay.getMonth());
 		if(leaves!=null)
 		{
 			salaryPay.setSalary( (employee.getSalary() - salaryPay.getDeduction()) - ((leaves.getNumberOfDays()*employee.getSalary())/workingDays));

@@ -1,19 +1,49 @@
-<h2> Leaves </h2>
-<table class = "table table-striped">
-    <thead>
-        <tr>
-            <th> Employee Id </th>
-            <th> Month</th>
-            <th> Year</th>
-            <th> Number of Days</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor = "let leave of leaves" >
-            <td> {{ leave.empId }} </td>
-            <td> {{ leave.month }} </td>
-            <td> {{ leave.year }} </td>
-            <td> {{ leave.numberOfDays }} </td>
-        </tr>
-    </tbody>
-</table>
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="employees">HR Management System</a>
+	</div>
+	<ul class="navbar-nav">
+		<li class="nav-item">
+			<a href="employees" class="nav-link">Employee List</a>
+		</li>
+		<li class="nav-item">
+			<a href="create-employee" class="nav-link">Add Employee</a>
+		</li>
+		<li class="nav-item">
+			<a href="leaves" class="nav-link">Leaves</a>
+		</li>
+		<li class="nav-item">
+			<a href="create-leaves" class="nav-link">Add Leaves</a>
+		</li>
+		<li class="nav-item">
+			<a href="salaries" class="nav-link">Salary Slips</a>
+		</li>
+		<li class="nav-item">
+			<a href="generate-payslip" class="nav-link">Generate PaySlip</a>
+		</li>
+		<li class="nav-item">
+			<a href="" class="nav-link">Logout</a>
+		</li>
+	</ul>
+</nav>
+<div class="container">
+	<h2> Leaves </h2>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th> Employee Id </th>
+				<th> Month</th>
+				<th> Year</th>
+				<th> Number of Days</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let leave of leaves">
+				<td> {{ leave.empId }} </td>
+				<td> {{ leave.month }} </td>
+				<td> {{ leave.year }} </td>
+				<td> {{ leave.numberOfDays }} </td>
+			</tr>
+		</tbody>
+	</table>
+</div>
