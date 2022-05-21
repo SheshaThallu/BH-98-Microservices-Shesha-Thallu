@@ -1,21 +1,42 @@
-<div class="container">
-	<h1 style="text-align: center; color: aqua; padding-top: 30px; padding-bottom: 50px;">HR Management System</h1>
-	<div class="col-md-6 offset-md-3">
-		<h3> Login </h3>
-		<form (ngSubmit)="onSubmit()">
-
-			<div class="form-group">
-				<label> UserName </label>
-				<input type="text" class="form-control" id="userName" [(ngModel)]="login.userName" name="userName">
+<div class="row body">
+	<div class="col-4">
+	</div>
+	<div class="container col-4">
+		<div class="screen">
+			<div class="screen__content">
+				<form class="login" novalidate #f="ngForm" (ngSubmit)="onSubmit()">
+					<div class="login__field">
+						<i class="login__icon fas fa-user"></i>
+						<div class="form-group">
+							<input type="text" class="form-control login__input" placeholder="User name" id="userName"
+								[(ngModel)]="login.userName" name="userName" required #uName="ngModel">
+						</div>
+						<div class="text-danger" *ngIf="uName.touched&&uName.invalid">
+							<p>*Please enter your User name</p>
+						</div>
+					</div>
+					<div class="login__field">
+						<i class="login__icon fas fa-lock"></i>
+						<div class="form-group">
+							<input type="password" class="form-control login__input" id="password" [(ngModel)]="login.password"
+								name="password" placeholder="Password" required #pass="ngModel">
+						</div>
+						<div class="text-danger" *ngIf="pass.touched&&pass.invalid">
+							<p>*Please enter your Password</p>
+						</div>
+					</div>
+					<button class="button login__submit" [disabled]="!f.valid">
+						<span class="button__text">Log In Now</span>
+						<i class="button__icon fas fa-chevron-right"></i>
+					</button>
+				</form>
 			</div>
-
-			<div class="form-group">
-				<label> Password </label>
-				<input type="password" class="form-control" id="password" [(ngModel)]="login.password" name="password">
+			<div class="screen__background">
+				<span class="screen__background__shape screen__background__shape4"></span>
+				<span class="screen__background__shape screen__background__shape3"></span>
+				<span class="screen__background__shape screen__background__shape2"></span>
+				<span class="screen__background__shape screen__background__shape1"></span>
 			</div>
-
-
-			<button class="btn btn-success" type="submit">Submit</button>
-		</form>
+		</div>
 	</div>
 </div>

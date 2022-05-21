@@ -21,13 +21,13 @@ export class LoginComponent implements OnInit {
 		this.loginService.authenticate(this.login).subscribe(data =>{
 			this.login1 = data;
 			console.log(data);
-			if(data.userName != null)
+			if(data != null)
 			{
 				this.router.navigate(['employees']);
 			}
 			else
 			{
-				alert("Invalid");
+				alert("Invalid User Name or Password");
 			}
 		});
 	}
