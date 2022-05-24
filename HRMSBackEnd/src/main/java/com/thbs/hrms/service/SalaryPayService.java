@@ -1,4 +1,4 @@
-package com.example.demo.service;
+package com.thbs.hrms.service;
 
 import java.util.Calendar;
 import java.util.List;
@@ -7,10 +7,10 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.entity.Employee;
-import com.example.demo.entity.Leaves;
-import com.example.demo.entity.SalaryPay;
-import com.example.demo.repository.SalaryPayRepository;
+import com.thbs.hrms.entity.Employee;
+import com.thbs.hrms.entity.Leaves;
+import com.thbs.hrms.entity.SalaryPay;
+import com.thbs.hrms.repository.SalaryPayRepository;
 
 @Service
 public class SalaryPayService 

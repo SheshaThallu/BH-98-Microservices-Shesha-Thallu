@@ -1,10 +1,10 @@
-package com.example.demo.service;
+package com.thbs.hrms.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.entity.Login;
-import com.example.demo.repository.LoginRepository;
+import com.thbs.hrms.entity.Login;
+import com.thbs.hrms.repository.LoginRepository;
 
 @Service
 public class LoginService 

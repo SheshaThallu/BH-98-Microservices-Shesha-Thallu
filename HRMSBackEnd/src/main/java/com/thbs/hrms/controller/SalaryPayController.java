@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+package com.thbs.hrms.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.entity.SalaryPay;
-import com.example.demo.service.SalaryPayService;
+import com.thbs.hrms.entity.SalaryPay;
+import com.thbs.hrms.service.SalaryPayService;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")

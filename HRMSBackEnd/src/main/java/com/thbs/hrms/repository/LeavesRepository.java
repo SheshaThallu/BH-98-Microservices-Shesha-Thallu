@@ -1,9 +1,9 @@
-package com.example.demo.repository;
+package com.thbs.hrms.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.example.demo.entity.Leaves;
+import com.thbs.hrms.entity.Leaves;
 
 @Repository
 public interface LeavesRepository extends JpaRepository<Leaves, Long>

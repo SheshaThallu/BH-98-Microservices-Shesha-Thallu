@@ -1,12 +1,12 @@
-package com.example.demo.service;
+package com.thbs.hrms.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.entity.Leaves;
-import com.example.demo.repository.LeavesRepository;
+import com.thbs.hrms.entity.Leaves;
+import com.thbs.hrms.repository.LeavesRepository;
 
 @Service
 public class LeavesService 

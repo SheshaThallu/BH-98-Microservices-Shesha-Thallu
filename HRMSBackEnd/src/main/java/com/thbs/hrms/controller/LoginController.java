@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+package com.thbs.hrms.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.entity.Login;
-import com.example.demo.service.LoginService;
+import com.thbs.hrms.entity.Login;
+import com.thbs.hrms.service.LoginService;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")

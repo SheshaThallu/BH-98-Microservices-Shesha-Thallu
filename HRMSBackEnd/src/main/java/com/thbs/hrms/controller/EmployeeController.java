@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+package com.thbs.hrms.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.entity.Employee;
-import com.example.demo.service.EmployeeService;
+import com.thbs.hrms.entity.Employee;
+import com.thbs.hrms.service.EmployeeService;
 
 
 @RestController

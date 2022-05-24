@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+package com.thbs.hrms.controller;
 
 import java.util.List;
 
@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.entity.Leaves;
-import com.example.demo.service.LeavesService;
+import com.thbs.hrms.entity.Leaves;
+import com.thbs.hrms.service.LeavesService;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
