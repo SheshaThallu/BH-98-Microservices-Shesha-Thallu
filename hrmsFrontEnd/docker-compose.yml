@@ -5,7 +5,7 @@
     angular-service:
       container_name: hrms-front-end-container
       restart: unless-stopped
-      build: ./hrmsFrontEnd
+      build: ./
       volumes: 
       - './:/usr/src/app'
       ports: 
