@@ -18,7 +18,7 @@ services:
       SPRING_DATASOURCE_USERNAME: "root"
       SPRING_DATASOURCE_PASSWORD: "Shesha@98"
     build: 
-      context: "./"
+      context: "./HRMSBackEnd"
       dockerfile: "Dockerfile"
     depends_on: 
       - mysql-standalone
