@@ -31,4 +31,12 @@ export class CreateEmployeeComponent implements OnInit {
 		console.log(this.employee);
 		this.saveEmployee();
 	}
+	addEmployee()
+	{
+		this.router.navigate(['/create-employee']);
+	}
+	leavesList()
+	{
+		this.router.navigate(['/leaves']);
+	}
 }
