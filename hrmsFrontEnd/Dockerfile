@@ -13,4 +13,4 @@
 	
 	FROM nginx:alpine
 	#COPY /dist/hrms-front-end /usr/share/nginx/html
-	COPY --from=builder /app/dist/hrms-front-end/* /usr/share/nginx/html/
+	COPY --from=builder /app/dist/hrms-front-end /usr/share/nginx/html
