@@ -9,4 +9,4 @@
       - './:/usr/src/app'
       ports: 
         - "4200:80"
-      command: bash -c "npm install && npm start"
+      command: ["npm", "start"]
