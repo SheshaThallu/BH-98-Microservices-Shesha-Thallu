@@ -30,5 +30,28 @@ export class GeneratePayslipComponent implements OnInit {
 		console.log(this.salaryPay);
 		this.saveSalaryPay();
 	}
+	goToEmployeeList() {
+		this.router.navigate(['/employees']);
+	}
+	addEmployee()
+	{
+		this.router.navigate(['/create-employee']);
+	}
+	leavesList()
+	{
+		this.router.navigate(['/leaves']);
+	}
+	addLeaves()
+	{
+		this.router.navigate(['/create-leaves']);
+	}
+	salarySlips()
+	{
+		this.router.navigate(['/salaries']);
+	}
+	generatePaySlip()
+	{
+		this.router.navigate(['/generate-payslip']);
+	}
 
 }

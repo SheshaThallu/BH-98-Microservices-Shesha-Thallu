@@ -24,12 +24,12 @@ export class CreateEmployeeComponent implements OnInit {
 		},
 			error => console.log(error));
 	}
-	goToEmployeeList() {
-		this.router.navigate(['/employees']);
-	}
 	onSubmit() {
 		console.log(this.employee);
 		this.saveEmployee();
+	}
+	goToEmployeeList() {
+		this.router.navigate(['/employees']);
 	}
 	addEmployee()
 	{
@@ -38,5 +38,17 @@ export class CreateEmployeeComponent implements OnInit {
 	leavesList()
 	{
 		this.router.navigate(['/leaves']);
+	}
+	addLeaves()
+	{
+		this.router.navigate(['/create-leaves']);
+	}
+	salarySlips()
+	{
+		this.router.navigate(['/salaries']);
+	}
+	generatePaySlip()
+	{
+		this.router.navigate(['/generate-payslip']);
 	}
 }

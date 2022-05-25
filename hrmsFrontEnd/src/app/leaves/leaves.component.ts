@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Leaves } from 'src/model/leaves';
 import { LeavesService } from 'src/service/leaves.service';
 
@@ -9,7 +10,7 @@ import { LeavesService } from 'src/service/leaves.service';
 })
 export class LeavesComponent implements OnInit {
 	leaves!: Leaves[];
-	constructor(private leavesService: LeavesService) { }
+	constructor(private leavesService: LeavesService,private router: Router) { }
 
 	ngOnInit(): void {
 		this.getLeaves();
@@ -20,6 +21,29 @@ export class LeavesComponent implements OnInit {
 			data => {
 				this.leaves = data;
 			});
+	}
+	goToEmployeeList() {
+		this.router.navigate(['/employees']);
+	}
+	addEmployee()
+	{
+		this.router.navigate(['/create-employee']);
+	}
+	leavesList()
+	{
+		this.router.navigate(['/leaves']);
+	}
+	addLeaves()
+	{
+		this.router.navigate(['/create-leaves']);
+	}
+	salarySlips()
+	{
+		this.router.navigate(['/salaries']);
+	}
+	generatePaySlip()
+	{
+		this.router.navigate(['/generate-payslip']);
 	}
 
 }

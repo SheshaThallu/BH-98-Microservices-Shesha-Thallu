@@ -41,5 +41,28 @@ export class SalaryslipDetailsComponent implements OnInit {
 				this.salaryPay = data;
 			});
 	}
+	goToEmployeeList() {
+		this.router.navigate(['/employees']);
+	}
+	addEmployee()
+	{
+		this.router.navigate(['/create-employee']);
+	}
+	leavesList()
+	{
+		this.router.navigate(['/leaves']);
+	}
+	addLeaves()
+	{
+		this.router.navigate(['/create-leaves']);
+	}
+	salarySlips()
+	{
+		this.router.navigate(['/salaries']);
+	}
+	generatePaySlip()
+	{
+		this.router.navigate(['/generate-payslip']);
+	}
 
 }
