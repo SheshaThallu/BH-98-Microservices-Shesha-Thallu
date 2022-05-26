@@ -14,5 +14,9 @@ public class LoginService
 	public Login autenticate(String userName,String password) {
 		return loginRepository.findByUserNameAndPassword(userName,password);
 	}
+	public Login save(Login login) 
+	{
+		return loginRepository.save(login);
+	}
 	
 }
