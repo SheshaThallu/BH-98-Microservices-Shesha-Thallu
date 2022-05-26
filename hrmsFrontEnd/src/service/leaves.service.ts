@@ -7,7 +7,7 @@ import { Leaves } from 'src/model/leaves';
 	providedIn: 'root'
 })
 export class LeavesService {
-	private baseURL = "http://localhost:8080/leaves";
+	private baseURL = "http://13.233.250.68:8080/leaves";
 	constructor(private httpClient: HttpClient) { }
 	getLeaves():Observable<Leaves[]>
 	{
