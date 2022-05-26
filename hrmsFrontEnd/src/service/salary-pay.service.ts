@@ -7,7 +7,7 @@ import { SalaryPay } from 'src/model/salary-pay';
 	providedIn: 'root'
 })
 export class SalaryPayService {
-	private baseURL = "http://localhost:8080/salaries";
+	private baseURL = "http://3.110.105.245:8080/salaries";
 	constructor(private httpClient: HttpClient) { }
 	getPaySlipList(): Observable<SalaryPay[]> {
 		return this.httpClient.get<SalaryPay[]>(`${this.baseURL}`);
