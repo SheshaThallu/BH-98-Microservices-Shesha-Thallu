@@ -15,7 +15,7 @@ import com.thbs.hrms.entity.SalaryPay;
 import com.thbs.hrms.service.SalaryPayService;
 
 @RestController
-@CrossOrigin(origins = "http://13.126.212.194")
+@CrossOrigin(origins = "*")
 public class SalaryPayController 
 {
 	@Autowired

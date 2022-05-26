@@ -14,7 +14,7 @@ import com.thbs.hrms.entity.Leaves;
 import com.thbs.hrms.service.LeavesService;
 
 @RestController
-@CrossOrigin(origins = "http://13.126.212.194")
+@CrossOrigin(origins = "*")
 public class LeavesController 
 {
 	@Autowired

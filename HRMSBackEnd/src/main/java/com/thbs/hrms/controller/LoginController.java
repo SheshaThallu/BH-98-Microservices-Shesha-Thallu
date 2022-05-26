@@ -12,7 +12,7 @@ import com.thbs.hrms.entity.Login;
 import com.thbs.hrms.service.LoginService;
 
 @RestController
-@CrossOrigin(origins = "http://13.126.212.194")
+@CrossOrigin(origins = "*")
 public class LoginController 
 {
 	@Autowired
