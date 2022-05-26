@@ -7,7 +7,7 @@ import { Login } from 'src/model/login';
 	providedIn: 'root'
 })
 export class LoginService {
-	private baseURL = "http://localhost:8080/login";
+	private baseURL = "http://15.207.112.223:8080/login";
 	constructor(private httpClient: HttpClient) { }
 	authenticate(login: Login): Observable<Login>
 	{
