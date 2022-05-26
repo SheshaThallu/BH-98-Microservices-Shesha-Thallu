@@ -18,7 +18,7 @@ import com.thbs.hrms.service.EmployeeService;
 
 
 @RestController
-@CrossOrigin(origins = "http://65.0.138.8:4200")
+@CrossOrigin(origins = "http://localhost:4200")
 public class EmployeeController 
 {
 	@Autowired
