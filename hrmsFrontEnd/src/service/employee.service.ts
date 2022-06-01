@@ -7,7 +7,7 @@ import { Employee } from 'src/model/employee';
 	providedIn: 'root'
 })
 export class EmployeeService {
-	private baseURL = "http://13.233.250.68:8080/employees";
+	private baseURL = "http://localhost:8080/employees";
 	constructor(private httpClient: HttpClient) { }
 	getEmployeesList(): Observable<Employee[]> {
 		return this.httpClient.get<Employee[]>(`${this.baseURL}`);
